@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quincy Crittendon | QB Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    /* ================== BRAND COLORS ================== */
+    :root {
+      --primary: #2563eb;
+      --dark: #020617;
+      --light: #f9fafb;
+      --muted: #6b7280;
+    }
+
+    /* ================== GLOBAL ================== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: var(--dark);
+      padding: 40px 0;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    /* ================== PAGE WRAPPER ================== */
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 16px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    }
+
+    /* page border */
+    .page-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: 2px solid #e5e7eb;
+      border-radius: 16px;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    /* inner page */
+    .page {
+      background: var(--light);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ================== HEADER ================== */
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 90px 40px;
+      text-align: center;
+    }
+
+    header img {
+      width: 140px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #cbd5f5;
+    }
+
+    /* ================== SECTIONS ================== */
+    section {
+      padding: 80px 60px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    section:nth-of-type(even) {
+      background: #f1f5f9;
+    }
+
+    section:last-child {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 4px;
+      background: var(--primary);
+      margin-top: 8px;
+      border-radius: 2px;
+    }
+
+    p {
+      font-size: 17px;
+      color: #1f2937;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    /* ================== CARDS ================== */
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      border-left: 5px solid var(--primary);
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* ================== SIDE CUT-OUT IMAGES ================== */
+    .side-image {
+      position: absolute;
+      width: 200px;
+      z-index: 20;
+      pointer-events: none;
+      filter: drop-shadow(0 15px 30px rgba(0,0,0,0.35));
+    }
+
+    .side-image.left {
+      left: -80px;
+      transform: rotate(-3deg);
+    }
+
+    .side-image.right {
+      right: -80px;
+      transform: rotate(3deg);
+    }
+
+    align-right {
+      text-align: right;
+    }
+
+    .align-right h2::after {
+        margin-left: auto;
+    }
+
+    .offset-1 { top: 420px; }
+    .offset-2 { top: 900px; }
+    .offset-3 { top: 1350px; }
+    .offset-4 { top: 1800px; }
+
+    /* ================== FOOTER ================== */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    /* ================== MOBILE ================== */
+    @media (max-width: 900px) {
+      body { padding: 20px 0; }
+      section { padding: 60px 30px; }
+      .side-image { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="page-wrap">
+
+  <!-- SIDE CUT-OUTS -->
+  <img src="images/StandingCutOut.png" class="side-image right offset-1" alt="">
+  <img src="images/images/ActionCutOutFlorida.png" class="side-image left offset-2" alt="">
+  <img src="images/ActionShotChatt.png" class="side-image right offset-3" alt="">
+  <img src="images/ThrowingCutOutFlorida.png" class="side-image left offset-4" alt="">
+
+  <div class="page">
+
+    <header>
+      <img src="images/2022Header.jpg" alt="Quincy Crittendon">
+      <h1>Quincy Crittendon</h1>
+      <p>Quarterback Training & Player Development</p>
+    </header>
+
+    <section>
+      <h2>About Quincy</h2>
+      <p>
+        I’m a quarterback focused on developing young athletes through
+        fundamentals, discipline, and confidence. My training emphasizes
+        mechanics, decision-making, and leadership on and off the field.
+      </p>
+    </section>
+
+    <section>
+      <h2>Testimonial</h2>
+      <div class="card">
+        <p>
+          “Quincy brings energy, patience, and real quarterback knowledge.
+          He connects with athletes and helps them understand the game.”
+        </p>
+        <p><strong>— Parent of High School QB</strong></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Training Services</h2>
+      <ul>
+        <li>1-on-1 Quarterback Training</li>
+        <li>Footwork & Mechanics</li>
+        <li>Film Study & Mental Development</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Pricing</h2>
+      <p>1-on-1 Session (60 min): <span class="price">$60</span></p>
+      <p>Group Session: <span class="price">$40 per athlete</span></p>
+      <p>Film Study: <span class="price">$30</span></p>
+    </section>
+
+<section class="align-right">
+  <h2>Training Locations</h2>
+  <div class="card">
+    <p>
+      📍 Birmingham, AL<br>
+      📍 Decatur, AL<br><br>
+      Training at local fields or travel arrangements available.
+    </p>
+  </div>
+</section>
+
+
+    <section>
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:qcritt12@email.com">qcritt12@email.com</a></p>
+        <p>Phone: (256) 616-2959</p>
+        <p>Instagram: <a href="#">@yourhandle</a></p>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Quincy Crittendon QB Training
+    </footer>
+
+  </div>
+</div>
+
+</body>
+</html>
