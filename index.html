@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    /* ================== BRAND COLORS ================== */
     :root {
       --primary: #2563eb;
       --dark: #020617;
@@ -14,7 +13,6 @@
       --muted: #6b7280;
     }
 
-    /* ================== GLOBAL ================== */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -24,7 +22,6 @@
       line-height: 1.6;
     }
 
-    /* ================== PAGE WRAPPER ================== */
     .page-wrap {
       max-width: 1100px;
       margin: 0 auto;
@@ -33,7 +30,6 @@
       box-shadow: 0 30px 60px rgba(0,0,0,0.4);
     }
 
-    /* page border */
     .page-wrap::before {
       content: "";
       position: absolute;
@@ -44,7 +40,6 @@
       z-index: 5;
     }
 
-    /* inner page */
     .page {
       background: var(--light);
       border-radius: 16px;
@@ -53,7 +48,6 @@
       z-index: 1;
     }
 
-    /* ================== HEADER ================== */
     header {
       background: var(--dark);
       color: white;
@@ -77,7 +71,6 @@
       color: #cbd5f5;
     }
 
-    /* ================== SECTIONS ================== */
     section {
       padding: 80px 60px;
       border-bottom: 1px solid #e5e7eb;
@@ -85,10 +78,6 @@
 
     section:nth-of-type(even) {
       background: #f1f5f9;
-    }
-
-    section:last-child {
-      border-bottom: none;
     }
 
     h2 {
@@ -109,19 +98,11 @@
 
     p {
       font-size: 17px;
-      color: #1f2937;
     }
 
-    ul {
-      padding-left: 20px;
-    }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 10px; }
 
-    li {
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-
-    /* ================== CARDS ================== */
     .card {
       background: white;
       padding: 24px;
@@ -130,19 +111,69 @@
       border-left: 5px solid var(--primary);
     }
 
+    .contact-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .right-photo { flex-direction: row; }
+
+    .contact-photo img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+
+    .contact-photo{
+      text-align: center;
+    }
+
+    .contact-photo img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+    
+.contact-info h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.contact-title {
+  margin: 4px 0 12px;
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.contact-meta {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
     .price {
       font-size: 20px;
       font-weight: bold;
       color: var(--primary);
     }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    /* ================== SIDE CUT-OUT IMAGES ================== */
     .side-image {
       position: absolute;
       width: 200px;
@@ -151,30 +182,17 @@
       filter: drop-shadow(0 15px 30px rgba(0,0,0,0.35));
     }
 
-    .side-image.left {
-      left: -80px;
-      transform: rotate(-3deg);
-    }
+    .side-image.left { left: -80px; transform: rotate(-3deg); }
+    .side-image.right { right: -80px; transform: rotate(3deg); }
 
-    .side-image.right {
-      right: -80px;
-      transform: rotate(3deg);
-    }
-
-    align-right {
-      text-align: right;
-    }
-
-    .align-right h2::after {
-        margin-left: auto;
-    }
+    .align-right h2 { text-align: right; }
+    .align-right h2::after { margin-left: auto; }
 
     .offset-1 { top: 420px; }
     .offset-2 { top: 900px; }
     .offset-3 { top: 1350px; }
     .offset-4 { top: 1800px; }
 
-    /* ================== FOOTER ================== */
     footer {
       background: var(--dark);
       color: white;
@@ -183,12 +201,55 @@
       font-size: 14px;
     }
 
-    /* ================== MOBILE ================== */
     @media (max-width: 900px) {
-      body { padding: 20px 0; }
       section { padding: 60px 30px; }
       .side-image { display: none; }
+      .contact-card { flex-direction: column; }
     }
+
+    /* ===== CTA SECTION ===== */
+.cta-section {
+  text-align: center;
+  padding: 100px 60px;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+}
+
+.cta-section h2 {
+  color: white;
+}
+
+.cta-section h2::after {
+  background: white;
+  margin: 12px auto 0;
+}
+
+.cta-section p {
+  max-width: 600px;
+  margin: 20px auto 40px;
+  font-size: 18px;
+  color: #e0e7ff;
+}
+
+/* CTA BUTTON */
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #1e3a8a;
+  padding: 16px 36px;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+}
+
   </style>
 </head>
 
@@ -196,11 +257,11 @@
 
 <div class="page-wrap">
 
-  <!-- SIDE CUT-OUTS -->
-  <img src="images/StandingCutOut.png" class="side-image right offset-1" alt="">
-  <img src="images/images/ActionCutOutFlorida.png" class="side-image left offset-2" alt="">
-  <img src="images/ActionShotChatt.png" class="side-image right offset-3" alt="">
-  <img src="images/ThrowingCutOutFlorida.png" class="side-image left offset-4" alt="">
+  <!-- SIDE CUT-OUTS (FIXED PATHS) -->
+  <img src="images/StandingCutOut.png" class="side-image right offset-1">
+  <img src="images/ActionCutOutFlorida.png" class="side-image left offset-2">
+  <img src="images/ActionShotChatt.png" class="side-image right offset-3">
+  <img src="images/ThrowingCutOutFlorida.png" class="side-image left offset-4">
 
   <div class="page">
 
@@ -222,11 +283,9 @@
     <section>
       <h2>Testimonial</h2>
       <div class="card">
-        <p>
-          “Quincy brings energy, patience, and real quarterback knowledge.
-          He connects with athletes and helps them understand the game.”
-        </p>
-        <p><strong>— Parent of High School QB</strong></p>
+        “Quincy brings energy, patience, and real quarterback knowledge.
+        He connects with athletes and helps them understand the game.”
+        <br><strong>— Parent of High School QB</strong>
       </div>
     </section>
 
@@ -246,26 +305,53 @@
       <p>Film Study: <span class="price">$30</span></p>
     </section>
 
-<section class="align-right">
-  <h2>Training Locations</h2>
-  <div class="card">
-    <p>
-      📍 Birmingham, AL<br>
-      📍 Decatur, AL<br><br>
-      Training at local fields or travel arrangements available.
-    </p>
-  </div>
+    <section class="align-right">
+      <h2>Training Locations</h2>
+      <div class="card">
+        📍 Birmingham, AL<br>
+        📍 Decatur, AL<br><br>
+        Training at local fields or travel arrangements available.
+      </div>
+    </section>
+
+    <section class="cta-section">
+  <h2>Ready to Get Started?</h2>
+
+  <p>
+    Interested in quarterback training or have questions about sessions?
+    Click below to submit an inquiry and Quincy will be in touch.
+  </p>
+
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSf8OIo0nHof83dwHEH4bPFouRqL_OOfZ6kjRx0xIJkIxltDpg/viewform"
+    target="_blank"
+    class="cta-button">
+    Request Training
+  </a>
 </section>
 
 
-    <section>
-      <h2>Contact</h2>
-      <div class="card">
-        <p>Email: <a href="mailto:qcritt12@email.com">qcritt12@email.com</a></p>
-        <p>Phone: (256) 616-2959</p>
-        <p>Instagram: <a href="#">@yourhandle</a></p>
-      </div>
-    </section>
+<section>
+  <h2>Contact</h2>
+
+  <div class="contact-card right-photo">
+    <div class="contact-info">
+      <h3>Quincy Crittendon</h3>
+      <p class="contact-title">Quarterback Trainer</p>
+
+      <p class="contact-meta">
+        📍 Birmingham & Decatur, AL<br>
+        📧 qcritt12@gmail.com<br>
+        📞 (256) 616-2959
+      </p>
+    </div>
+
+    <div class="contact-photo">
+      <img src="images/headshot.jpg" alt="Quincy Crittendon">
+    </div>
+  </div>
+</section>
+
 
     <footer>
       © 2025 Quincy Crittendon QB Training
